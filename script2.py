@@ -178,11 +178,7 @@ def main(check_for_uniqueness: bool = False):
                         print("Age:", age)
                         
                         duration_and_dosage = row[6]
-                        duration_and_dosage = duration_and_dosage.replace("years","years / ")
-                        duration_and_dosage = duration_and_dosage.replace("months","months / ")
-                        duration_and_dosage = duration_and_dosage.replace("weeks","weeks / ")
-                        duration_and_dosage = duration_and_dosage.replace("days","days / ")
-                        duration_and_dosage = duration_and_dosage.strip()
+                        duration_and_dosage = duration_and_dosage.replace("years","years / ").replace("months","months / ").replace("weeks","weeks / ").replace("days","days / ").strip()
                         if duration_and_dosage[-2:] == " /":
                             duration_and_dosage = duration_and_dosage[:-2]
                         print("Duration / Dosage:", duration_and_dosage)
